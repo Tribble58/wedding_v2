@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Владлен + Дана | Свадьба 5 апреля 2026</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;500;600&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        :root {
+            --bg-cream: #FDF4E8;
+            --primary-pink: #F8C8DC;
+            --accent-coral: #FF8A80;
+            --secondary-lilac: #E1BEE7;
+            --mint-green: #C8E6C9;
+            --warm-orange: #FFE0B2;
+            --text-dark: #4A4A4A;
+            --text-light: #757575;
+            --white: #FFFFFF;
+            --shadow-light: 0 12px 40px rgba(248, 200, 220, 0.15);
+            --shadow-medium: 0 20px 60px rgba(0,0,0,0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        /* Decorative elements */
+        .heart-deco {
+            position: absolute;
+            font-size: 1rem;
+            opacity: 0.3;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* Hero Block */
+        .hero-block {
+            min-height: 100vh;
+            background: linear-gradient(135deg, var(--bg-cream) 0%, #FFF8F0 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 1rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-card {
+            max-width: 900px;
+            background: var(--white);
+            padding: 4rem 3rem;
+            text-align: center;
+            position: relative;
+            border-radius: 32px;
+            box-shadow: var(--shadow-medium);
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-subtitle {
+            display: block;
+            font-family: 'Dancing Script', cursive;
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            color: var(--secondary-lilac);
+            margin-bottom: 1rem;
+            position: relative;
+        }
+
+        .hero-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: clamp(4rem, 10vw, 7rem);
+            font-weight: 700;
+            background: linear-gradient(45deg, var(--primary-pink), var(--accent-coral));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin: 0 0 1.5rem 0;
+            line-height: 1.1;
+        }
+
+        .hero-date {
+            font-size: 1.5rem;
+            color: var(--accent-coral);
+            font-weight: 500;
+            margin-bottom: 3rem;
+            text-decoration: underline;
+            text-underline-offset: 8px;
+        }
+
+        .photos-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 3rem;
+            margin: 3rem 0;
+            flex-wrap: wrap;
+        }
+
+        .photo-frame {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 8px solid var(--primary-pink);
+            overflow: hidden;
+            position: relative;
+            box-shadow: var(--shadow-medium);
+            transition: transform 0.3s ease;
+        }
+
+        .photo-frame:hover {
+            transform: scale(1.05);
+        }
+
+        .photo-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .photo-heart {
+            font-size: 2.5rem;
+            color: var(--accent-coral);
+            animation: heartbeat 1.5s ease-in-out infinite;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+
+        .names-union {
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-top: 2rem;
+        }
+
+        /* Invitation Block */
+        .invitation-block {
+            padding: 8rem 2rem;
+            background: var(--bg-cream);
+        }
+
+        .invitation-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hearts-image img {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+            border-radius: 32px;
+            box-shadow: var(--shadow-medium);
+        }
+
+        .invitation-text {
+            padding: 2rem;
+        }
+
+        .section-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            color: var(--accent-coral);
+            margin-bottom: 2rem;
+            line-height: 1.2;
+        }
+
+        /* Schedule Block */
+        .schedule-block {
+            padding: 8rem 2rem;
+            background: var(--white);
+        }
+
+        .schedule-card {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 4rem 3rem;
+            text-align: center;
+            background: var(--bg-cream);
+            border-radius: 32px;
+            box-shadow: var(--shadow-light);
+        }
+
+        .schedule-list {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .schedule-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+            font-size: 1.3rem;
+            padding: 1.5rem;
+            background: var(--white);
+            border-radius: 20px;
+            box-shadow: var(--shadow-light);
+        }
+
+        .time {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 1.6rem;
+            font-weight: 600;
+            background: linear-gradient(45deg, var(--secondary-lilac), var(--mint-green));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            min-width: 70px;
+            text-align: center;
+        }
+
+        /* Location Block */
+        .location-block {
+            padding: 8rem 2rem;
+            background: var(--mint-green);
+        }
+
+        .location-card {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem;
+            background: var(--white);
+            border-radius: 32px;
+            box-shadow: var(--shadow-medium);
+            text-align: center;
+        }
+
+        .location-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+            align-items: center;
+            margin-top: 2rem;
+        }
+
+        .location-image img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 24px;
+            box-shadow: var(--shadow-light);
+        }
+
+        .location-details {
+            text-align: left;
+        }
+
+        .location-label {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .location-address {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            line-height: 1.5;
+        }
+
+        .location-address a {
+            color: var(--accent-coral);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .location-address a:hover {
+            text-decoration: underline;
+        }
+
+        .map-btn {
+            display: inline-block;
+            background: linear-gradient(45deg, var(--primary-pink), var(--accent-coral));
+            color: var(--white);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: transform 0.3s ease;
+            box-shadow: var(--shadow-light);
+        }
+
+        .map-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(248, 200, 220, 0.4);
+        }
+
+        /* Dresscode Block */
+        .dresscode-block {
+            padding: 8rem 2rem;
+            background: var(--warm-orange);
+        }
+
+        .dresscode-card {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 4rem;
+            background: var(--white);
+            border-radius: 32px;
+            box-shadow: var(--shadow-medium);
+            text-align: center;
+        }
+
+        .dresscode-text {
+            font-size: 1.2rem;
+            margin: 2rem 0 4rem 0;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .color-palette {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            margin: 3rem 0;
+            flex-wrap: wrap;
+        }
+
+        .color-swatch {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            box-shadow: var(--shadow-medium);
+            transition: transform 0.3s ease;
+            background: var(--color, var(--primary-pink));
+        }
+
+        .color-swatch:hover {
+            transform: scale(1.1);
+        }
+
+        .outfits-gallery {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 3rem;
+        }
+
+        .outfits-gallery img {
+            width: 200px;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: var(--shadow-light);
+        }
+
+        /* Gifts Block */
+        .gifts-block {
+            padding: 8rem 2rem;
+            background: var(--bg-cream);
+        }
+
+        .gifts-card {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 4rem 3rem;
+            background: var(--white);
+            border-radius: 32px;
+            box-shadow: var(--shadow-medium);
+            text-align: center;
+        }
+
+        .gifts-main {
+            font-size: 1.4rem;
+            margin: 2rem 0 3rem 0;
+            font-weight: 500;
+        }
+
+        .flowers-note {
+            background: linear-gradient(135deg, var(--secondary-lilac), var(--mint-green));
+            padding: 2.5rem;
+            border-radius: 24px;
+            margin-top: 3rem;
+            color: var(--text-dark);
+        }
+
+        .flowers-note p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        .footer {
+            padding: 4rem 2rem 2rem;
+            text-align: center;
+            background: var(--text-dark);
+            color: var(--white);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .location-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                text-align: center;
+            }
+            
+            .location-details {
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .invitation-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .photos-container {
+                flex-direction: column;
+                gap: 2rem;
+            }
+            
+            .photo-frame {
+                width: 160px;
+                height: 160px;
+            }
+            
+            .hero-card,
+            .schedule-card,
+            .location-card,
+            .dresscode-card,
+            .gifts-card {
+                padding: 2rem 1.5rem;
+                margin: 1rem;
+            }
+            
+            .schedule-item {
+                flex-direction: column;
+                gap: 0.5rem;
+                padding: 1rem;
+            }
+            
+            .outfits-gallery img {
+                width: 160px;
+                height: 220px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 3rem;
+            }
+            
+            .color-palette {
+                gap: 1rem;
+            }
+            
+            .color-swatch {
+                width: 60px;
+                height: 60px;
+            }
+        }
+
+        /* Scroll animations */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease-out;
+        }
+
+        .animate-on-scroll.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Block -->
+    <section class="hero-block animate-on-scroll">
+        <div class="hero-card">
+            <h1 class="hero-title">
+                <span class="hero-subtitle">Приглашение на нашу</span>
+                свадьбу
+            </h1>
+            <p class="hero-date">5 апреля 2026 года</p>
+            
+            <div class="photos-container">
+                <div class="photo-frame groom-photo">
+                    <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=300&h=300&fit=crop&crop=face" alt="Владлен">
+                    <span class="photo-label groom-label">Владлен</span>
+                </div>
+                <div class="photo-heart">♥</div>
+                <div class="photo-frame bride-photo">
+                    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=300&h=300&fit=crop&crop=face" alt="Дана">
+                    <span class="photo-label bride-label">Дана</span>
+                </div>
+            </div>
+            
+            <p class="names-union">Владлен + Дана = любовь 💕</p>
+        </div>
+    </section>
+
+    <!-- Invitation Block -->
+    <section class="invitation-block animate-on-scroll">
+        <div class="invitation-container">
+            <div class="hearts-image">
+                <img src="https://images.unsplash.com/photo-1560815738-0e2b3e6915b4?w=600&h=450&fit=crop" alt="Руки в форме сердца">
+            </div>
+            <div class="invitation-text">
+                <h2 class="section-title">Дорогие друзья и близкие!</h2>
+                <p>
+                    Мы скоро станем мужем и женой и приглашаем вас отпраздновать вместе с нами 
+                    незабываемый день нашей свадьбы.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Block -->
+    <section class="schedule-block animate-on-scroll">
+        <div class="schedule-card">
+            <h2 class="section-title">План дня</h2>
+            <div class="schedule-list">
+                <div class="schedule-item">
+                    <span class="time">15:20</span>
+                    <span>роспись</span>
+                </div>
+                <div class="schedule-item">
+                    <span class="time">16:00</span>
+                    <span>сбор гостей в ресторане</span>
+                </div>
+                <div class="schedule-item">
+                    <span class="time">16:30</span>
+                    <span>начало банкета</span>
+                </div>
+                <div class="schedule-item">
+                    <span class="time">21:30</span>
+                    <span>окончание банкета</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Block -->
+    <section class="location-block animate-on-scroll">
+        <div class="location-card">
+            <h2 class="section-title">Место</h2>
+            <div class="location-content">
+                <div class="location-image">
+                    <img src="https://images.unsplash.com/photo-1571896349840-0d711a951458?w=500&h=300&fit=crop" alt="Дворец бракосочетания">
+                </div>
+                <div class="location-details">
+                    <p class="location-label">Адрес проведения:</p>
+                    <p class="location-address">
+                        Фурштатская ул., 52<br>
+                        <a href="https://yandex.ru/maps/org/dvorets_brakosochetaniya_2/1063007010/" target="_blank" rel="noopener">
+                            Дворец бракосочетания №2
+                        </a>
+                    </p>
+                    <a href="https://yandex.ru/maps/org/dvorets_brakosochetaniya_2/1063007010/" class="map-btn" target="_blank" rel="noopener">
+                        Посмотреть на карте 📍
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dresscode Block -->
+    <section class="dresscode-block animate-on-scroll">
+        <div class="dresscode-card">
+            <h2 class="section-title">Дресс-код</h2>
+            <p class="dresscode-text">
+                Мы бы хотели попросить отдать предпочтение оттенкам с картинок ниже 
+                и фасонам, в которых вы будете чувствовать себя комфортно.
+            </p>
+            
+            <div class="color-palette">
+                <div class="color-swatch" style="--color: #F8C8DC"></div>
+                <div class="color-swatch" style="--color: #FFE0B2"></div>
+                <div class="color-swatch" style="--color: #C8E6C9"></div>
+                <div class="color-swatch" style="--color: #E1BEE7"></div>
+                <div class="color-swatch" style="--color: #FFCCBC"></div>
+                <div class="color-swatch" style="--color: #D1C4E9"></div>
+            </div>
+            
+            <div class="outfits-gallery">
+                <img src="https://images.unsplash.com/photo-1459842032050-e3b7da2a0ce0?w=200&h=280&fit=crop" alt="Платье 1">
+                <img src="https://images.unsplash.com/photo-1585487000157-2d1fb984ff6f?w=200&h=280&fit=crop" alt="Платье 2">
+                <img src="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=200&h=280&fit=crop" alt="Платье 3">
+                <img src="https://images.unsplash.com/photo-1598033124237-67d0a87249e5?w=200&h=280&fit=crop" alt="Костюм 1">
+            </div>
+        </div>
+    </section>
+
+    <!-- Gifts Block -->
+    <section class="gifts-block animate-on-scroll">
+        <div class="gifts-card">
+            <h2 class="section-title">Подарки</h2>
+            <p class="gifts-main">
+                Не беспокойтесь с выбором подарков, принимаем любые денежные знаки 💳
+            </p>
+            
+            <div class="flowers-note">
+                <p>
+                    Просим не отягощать себя выбором букетов, декор и украшения уже будут 
+                    содержать много цветов, которые будут украшать зал и невесту 🌸
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>С любовью, Владлен + Дана 💕</p>
+        <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
+            Сайт создан с ❤️ для особенного дня
+        </p>
+    </footer>
+
+    <script>
+        // Smooth scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animated');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Navbar scroll effect (if needed)
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            document.querySelectorAll('.hero-deco').forEach((deco, i) => {
+                deco.style.transform = `translateY(${scrolled * 0.5}px)`;
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,17 +1,46 @@
-'use client'
+import React from "react";
+import FloatingEmojis from "./FloatingEmojis";
+import Image from "next/image";
 
-export default function TitleScreen() {
+const TitleScreen: React.FC = () => {
   return (
-    <section className="min-h-screen w-full flex flex-col items-center justify-center bg-gradient-to-b from-pink-100 to-white px-4 py-8">
-      <div className="text-center space-y-6 max-w-md">
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif text-pink-800 leading-tight">
-          Приглашение на свадьбу
+    <section className="relative min-h-screen flex flex-col items-center justify-center px-6 py-8 bg-cream">
+      <FloatingEmojis count={7} />
+      
+      <div className="relative z-10 flex flex-col items-center space-y-6 max-w-md">
+        <h1 className="text-3xl md:text-4xl text-center text-gray-700 font-handwritten">
+          Приглашаем вас на нашу свадьбу
         </h1>
-        <div className="w-20 sm:w-24 h-1 bg-pink-400 mx-auto mt-6"></div>
-        <p className="text-pink-600 text-base sm:text-lg mt-8">
-          Скроллите вниз, чтобы узнать больше
+        
+        <p className="text-2xl md:text-3xl text-center text-gray-800 font-bold">
+          5 апреля 2026 года
         </p>
+
+        <div className="relative mt-4">
+          <div className="flex justify-around mb-2 text-sm text-gray-600 font-handwritten">
+            <span className="absolute left-12">жених</span>
+            <span className="absolute right-12">невеста</span>
+          </div>
+          
+          <div className="relative w-72 h-80 mt-8 border-4 border-gray-200 rounded-[40px] overflow-hidden shadow-lg bg-white">
+            <Image
+              src="/images/couple-child.jpg"
+              alt="Детские фото жениха и невесты"
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
+        </div>
+
+        <div className="mt-6 bg-white px-6 py-3 rounded-3xl shadow-md">
+          <p className="text-xl md:text-2xl text-softPink font-bold text-center">
+            Дана + Владлен = ❤️
+          </p>
+        </div>
       </div>
     </section>
-  )
-}
+  );
+};
+
+export default TitleScreen;
