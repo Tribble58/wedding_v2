@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const LocationScreen: React.FC = () => {
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center px-6 py-12 bg-cream">
+    <section className="relative min-h-screen flex flex-col items-center justify-center px-6 py-4 bg-cream">
       <FloatingEmojis count={7} />
       
       <div className="relative z-10 w-full max-w-md">

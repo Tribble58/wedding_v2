@@ -10,7 +10,7 @@ const scheduleItems = [
 
 const ScheduleScreen: React.FC = () => {
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center px-6 py-12 bg-cream">
+    <section className="relative min-h-screen flex flex-col items-center justify-center px-6 py-4 bg-cream">
       <FloatingEmojis count={7} />
       
       <div className="relative z-10 w-full max-w-md">
@@ -30,7 +30,7 @@ const ScheduleScreen: React.FC = () => {
               <span className="text-lg md:text-xl font-bold text-gray-800 mr-3">
                 {item.time}
               </span>
-              <span className="text-gray-600">·</span>
+              <span className="text-gray-400 text-xl">|</span>
               <span className="text-sm md:text-base text-gray-600 ml-3">
                 {item.event}
               </span>
