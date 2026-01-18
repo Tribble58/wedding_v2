@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import FloatingEmojis from "./FloatingEmojis";
 import Image from "next/image";
 
 const colors = [
@@ -16,10 +15,8 @@ const DressCodeScreen: React.FC = () => {
 
   return (
     <>
-      <section className="relative min-h-screen flex flex-col items-center justify-center px-6 py-4 bg-cream">
-        <FloatingEmojis count={7} />
-        
-        <div className="relative z-10 w-full max-w-md space-y-8">
+      <section className="relative min-h-screen flex flex-col items-center justify-center px-6 py-0 bg-cream z-10">
+        <div className="w-full max-w-md space-y-8">
           <h2 className="text-3xl md:text-4xl text-center text-gray-700 font-handwritten">
             Дресс-код
           </h2>
@@ -49,7 +46,6 @@ const DressCodeScreen: React.FC = () => {
             <h3 className="text-xl text-center text-gray-700 font-handwritten mb-4">
               Фасоны:
             </h3>
-            {/* Соотношение сторон 1101:1280 = примерно 0.86:1 */}
             <div 
               className="relative w-full rounded-2xl overflow-hidden border-2 border-gray-200 shadow-lg bg-white cursor-pointer hover:scale-[1.02] transition-transform"
               style={{ aspectRatio: '1101 / 1280' }}
@@ -67,7 +63,6 @@ const DressCodeScreen: React.FC = () => {
         </div>
       </section>
 
-      {/* Полноэкранное модальное окно */}
       {isImageOpen && (
         <div
           className="fixed inset-0 z-50 bg-black bg-opacity-95 flex items-center justify-center p-4"
