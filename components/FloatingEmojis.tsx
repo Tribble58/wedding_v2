@@ -3,36 +3,65 @@
 import React from "react";
 
 interface FloatingEmojisProps {
+  emojis?: string[];
   count?: number;
 }
 
-const FloatingEmojis: React.FC<FloatingEmojisProps> = ({ count = 14 }) => {
-  const emojis = ["💕", "❤️", "💍", "🤵", "👰", "🕊️"];
+const FloatingEmojis: React.FC<FloatingEmojisProps> = ({
+  emojis = ["💕", "❤️", "💍", "🤵", "👰", "🕊️"],
+  count = 7,
+}) => {
+  const getRandomEmoji = () => emojis[Math.floor(Math.random() * emojis.length)];
+  const getRandomAnimation = () => {
+    const animations = ["animate-float", "animate-drift", "animate-rotate"];
+    return animations[Math.floor(Math.random() * animations.length)];
+  };
+  const getRandomDelay = () => Math.random() * 3;
+  
+  // Позиции только по краям экрана
+  const getRandomPosition = () => {
+    const side = Math.floor(Math.random() * 4);
+    
+    switch(side) {
+      case 0: // top
+        return {
+          top: `${Math.random() * 15}%`,
+          left: `${Math.random() * 100}%`,
+        };
+      case 1: // right
+        return {
+          top: `${Math.random() * 100}%`,
+          right: `${Math.random() * 10}%`,
+          left: 'auto',
+        };
+      case 2: // bottom
+        return {
+          bottom: `${Math.random() * 15}%`,
+          left: `${Math.random() * 100}%`,
+          top: 'auto',
+        };
+      default: // left
+        return {
+          top: `${Math.random() * 100}%`,
+          left: `${Math.random() * 10}%`,
+        };
+    }
+  };
 
   return (
-    <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
-      {Array.from({ length: count }).map((_, i) => {
-        const delay = (i * 0.3) % 3;
-        const side = i % 4;
-        
-        let positionClass = "";
-        switch(side) {
-          case 0: positionClass = "top-4 left-4"; break;
-          case 1: positionClass = "top-4 right-4"; break;
-          case 2: positionClass = "bottom-4 left-4"; break;
-          case 3: positionClass = "bottom-4 right-4"; break;
-        }
-
-        return (
-          <div
-            key={i}
-            className={`absolute text-2xl md:text-3xl opacity-70 animate-emojiPath ${positionClass}`}
-            style={{ animationDelay: `${delay}s` }}
-          >
-            {emojis[Math.floor(Math.random() * emojis.length)]}
-          </div>
-        );
-      })}
+    <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
+      {Array.from({ length: count }).map((_, i) => (
+        <div
+          key={i}
+          className={`absolute text-2xl md:text-3xl opacity-70 ${getRandomAnimation()}`}
+          style={{
+            ...getRandomPosition(),
+            animationDelay: `${getRandomDelay()}s`,
+          }}
+        >
+          {getRandomEmoji()}
+        </div>
+      ))}
     </div>
   );
 };
