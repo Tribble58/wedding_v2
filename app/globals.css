@@ -24,3 +24,26 @@ body {
 h1, h2, h3 {
   font-family: 'Caveat', cursive;
 }
+
+/* Анимация эмодзи */
+@keyframes emojiPath {
+  0% { 
+    transform: translateX(0) translateY(0) rotate(0deg); 
+  }
+  25% { 
+    transform: translateX(20px) translateY(-30px) rotate(90deg); 
+  }
+  50% { 
+    transform: translateX(-20px) translateY(0) rotate(180deg); 
+  }
+  75% { 
+    transform: translateX(20px) translateY(30px) rotate(270deg); 
+  }
+  100% { 
+    transform: translateX(0) translateY(0) rotate(360deg); 
+  }
+}
+
+.animate-emojiPath {
+  animation: emojiPath 8s ease-in-out infinite;
+}
