@@ -5,10 +5,8 @@ import FloatingEmojis from "./FloatingEmojis";
 import Image from "next/image";
 
 const colors = [
-  { name: "Графит", hex: "#332E2A" },
-  { name: "Дождливый лес", hex: "#384637" },
-  { name: "Фисташка", hex: "#8B907C" },
-  { name: "Светло-серый", hex: "#D0CCCC" },
+  { name: "Графит", hex: "#332E2A" },      // Черный
+  { name: "Дождливый лес", hex: "#384637" }, // Оливковый
 ];
 
 const DressCodeScreen: React.FC = () => {
@@ -32,11 +30,11 @@ const DressCodeScreen: React.FC = () => {
             <h3 className="text-xl text-center text-gray-700 font-handwritten mb-4">
               Оттенки:
             </h3>
-            <div className="grid grid-cols-2 gap-6 justify-items-center">
+            <div className="flex justify-between space-x-8">
               {colors.map((color, index) => (
                 <div key={index} className="flex flex-col items-center space-y-2">
                   <div
-                    className="w-20 h-20 rounded-full border-2 border-gray-300 shadow-md"
+                    className="w-24 h-24 rounded-full border-2 border-gray-300 shadow-md"
                     style={{ backgroundColor: color.hex }}
                   />
                   <span className="text-xs text-gray-600 text-center">{color.name}</span>
@@ -49,16 +47,17 @@ const DressCodeScreen: React.FC = () => {
             <h3 className="text-xl text-center text-gray-700 font-handwritten mb-4">
               Фасоны:
             </h3>
+            {/* Соотношение 960:868 ≈ 1.106 */}
             <div 
-              className="relative w-full rounded-2xl overflow-hidden border-2 border-gray-200 shadow-lg bg-white cursor-pointer hover:scale-[1.02] transition-transform"
-              style={{ aspectRatio: '1101 / 1280' }}
+              className="relative w-full rounded-2xl overflow-hidden border-2 border-gray-200 shadow-lg bg-white cursor-pointer hover:scale-[1.02] transition-transform mx-auto"
+              style={{ aspectRatio: '960 / 868' }}
               onClick={() => setIsImageOpen(true)}
             >
               <Image
                 src="/images/dress-styles.jpg"
                 alt="Примеры фасонов платьев"
                 fill
-                className="object-contain"
+                className="object-contain p-4"
               />
             </div>
             <p className="text-xs text-gray-500 text-center mt-2">Нажмите для увеличения</p>
@@ -76,7 +75,7 @@ const DressCodeScreen: React.FC = () => {
               src="/images/dress-styles.jpg"
               alt="Примеры фасонов платьев"
               fill
-              className="object-contain"
+              className="object-contain p-4"
             />
           </div>
           <button

@@ -1,5 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Comfortaa:wght@300;400;700&display=swap');
-@import url('https://fonts-online.ru/fonts/pink-mouse-script-rus');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap');
+
+/* Основной шрифт Pink Mouse Script RUS */
+@font-face {
+  font-family: 'Pink Mouse Script RUS';
+  src: url('/fonts/PinkMouseScriptRUS-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  font-feature-settings: 'liga', 'kern';
+}
 
 @tailwind base;
 @tailwind components;
@@ -22,8 +31,8 @@ body {
   overflow-x: hidden;
 }
 
-h1, h2, h3 {
-  font-family: 'Pink Mouse Script RUS', 'Caveat', cursive;
+.font-handwritten {
+  font-family: 'Pink Mouse Script RUS', cursive !important;
 }
 
 /* Анимации эмодзи */

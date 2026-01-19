@@ -20,8 +20,8 @@ const config: Config = {
         orange: "#FF8C42",
       },
       fontFamily: {
-        handwritten: ["Caveat", "cursive"],
-        rounded: ["Comfortaa", "cursive"],
+        handwritten: ['Pink Mouse Script RUS', 'Comfortaa', 'cursive'],
+        rounded: ['Comfortaa', 'cursive'],
       },
       animation: {
         float: "float 5s ease-in-out infinite",

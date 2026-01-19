@@ -18,7 +18,7 @@ const InvitationScreen: React.FC = () => {
 
         <div className="relative w-72 h-80 border-4 border-gray-200 rounded-[35px] overflow-hidden shadow-lg">
           <Image
-            src="/images/together.jpg"
+            src="/images/together1.jpg"
             alt="Фото пары в детстве"
             fill
             className="object-cover"

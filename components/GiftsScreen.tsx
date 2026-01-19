@@ -1,7 +1,7 @@
 import React from "react";
 import FloatingEmojis from "./FloatingEmojis";
 
-const GOOGLE_FORM_URL = "https://forms.gle/your-google-form-id";
+const GOOGLE_FORM_URL = "https://forms.gle/orrxTRJbD8yy6gqs9";
 
 const GiftsScreen: React.FC = () => {
   return (
@@ -44,6 +44,15 @@ const GiftsScreen: React.FC = () => {
             className="block w-full max-w-xs mx-auto bg-gradient-to-r from-softPink to-peach text-white font-bold text-base md:text-lg py-4 px-8 rounded-3xl shadow-lg hover:scale-105 transition-transform"
           >
             Подтвердить участие
+          </a>
+
+          {/* Дополнительная ссылка на Google форму */}
+          <a
+            href={GOOGLE_FORM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block w-full max-w-xs mx-auto text-sm text-gray-600 underline hover:text-gray-800 transition-colors"
+          >
           </a>
         </div>
       </div>

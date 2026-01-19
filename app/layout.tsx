@@ -14,7 +14,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ru">
-      <body className="antialiased">{children}</body>
+      <head>
+        <link rel="preload" href="/fonts/PinkMouseScriptRUS-Regular.otf" as="font" type="font/otf" crossOrigin="anonymous" />
+      </head>
+      <body className="antialiased font-pms">{children}</body>
     </html>
   );
 }
