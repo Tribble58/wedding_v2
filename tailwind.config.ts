@@ -1,3 +1,4 @@
+// tailwind.config.ts
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -20,16 +21,28 @@ const config: Config = {
         orange: "#FF8C42",
       },
       fontFamily: {
-        handwritten: ['Bad Script', 'Pink Mouse Script RUS', 'Comfortaa', 'cursive'],
-        rounded: ['Comfortaa', 'cursive'],
-        badscript: ['Bad Script', 'cursive'],
+        // ✨ Свадебный “скриптовый” (заголовки/имена)
+        wedding: ["var(--font-wedding)", "cursive"],
+
+        // Основной читаемый “курсив” (текст)
+        cursive: ["var(--font-body)", "ui-serif", "Georgia", "serif"],
+
+        // Оставил алиас, чтобы не ломать существующие классы в компонентах
+        handwritten: ["var(--font-wedding)", "cursive"],
+
+        // Оставил алиас, чтобы не ломать существующие классы в компонентах
+        rounded: ["var(--font-body)", "ui-serif", "Georgia", "serif"],
       },
       fontSize: {
-        'h1': 'clamp(2.25rem, 6vw, 3.5rem)',
-        'h2': 'clamp(2rem, 5.5vw, 3rem)',
-        'h3': 'clamp(1.5rem, 4vw, 2.25rem)',
-        'title': 'clamp(1.875rem, 5vw, 3rem)',
-        'text-lg': 'clamp(1.125rem, 3.5vw, 1.5rem)',
+        h1: "clamp(2.75rem, 8vw, 4.5rem)",
+        h2: "clamp(2.5rem, 7vw, 4rem)",
+        h3: "clamp(2rem, 6vw, 3.25rem)",
+        title: "clamp(2.25rem, 6.5vw, 3.75rem)",
+        "text-lg": "clamp(1.375rem, 4.5vw, 2rem)",
+        "text-xl": "clamp(1.5rem, 5vw, 2.25rem)",
+      },
+      letterSpacing: {
+        wedding: "0.05em",
       },
       animation: {
         float: "float 5s ease-in-out infinite",
@@ -54,4 +67,5 @@ const config: Config = {
   },
   plugins: [],
 };
+
 export default config;

@@ -1,5 +1,22 @@
+// app/layout.tsx
 import type { Metadata } from "next";
 import "./globals.css";
+import { Lobster, Cormorant_Garamond } from "next/font/google";
+
+const weddingScript = Lobster({
+  subsets: ["cyrillic", "latin", "latin-ext"],
+  weight: "400",
+  variable: "--font-wedding",
+  display: "swap",
+});
+
+const weddingBody = Cormorant_Garamond({
+  subsets: ["cyrillic", "latin", "latin-ext"],
+  weight: ["400", "500", "600", "700"],
+  style: ["italic"],
+  variable: "--font-body",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Дана и Владлен - Приглашение на свадьбу",
@@ -13,14 +30,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ru">
-      <head>
-        {/* Preload шрифтов */}
-        <link rel="preload" href="/fonts/PinkMouseScriptRUS-Regular.otf" as="font" type="font/otf" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      </head>
-      <body className="antialiased font-pms">{children}</body>
+    <html
+      lang="ru"
+      className={`${weddingBody.variable} ${weddingScript.variable}`}
+    >
+      <body className="min-h-screen bg-cream text-graphite antialiased">
+        {children}
+      </body>
     </html>
   );
 }
