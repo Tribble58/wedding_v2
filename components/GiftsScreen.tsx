@@ -1,11 +1,14 @@
 import React from "react";
+import FloatingEmojis from "./FloatingEmojis";
 
 const GOOGLE_FORM_URL = "https://forms.gle/your-google-form-id";
 
 const GiftsScreen: React.FC = () => {
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center px-6 py-0 bg-cream z-10">
-      <div className="w-full max-w-md space-y-6">
+    <section className="relative min-h-screen flex flex-col items-center justify-center px-6 py-8 bg-cream">
+      <FloatingEmojis count={7} />
+      
+      <div className="relative z-10 w-full max-w-md space-y-6">
         <h2 className="text-3xl md:text-4xl text-center text-softPink font-handwritten">
           Подарки
         </h2>

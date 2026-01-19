@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import FloatingEmojis from "./FloatingEmojis";
 import Image from "next/image";
 
 const colors = [
@@ -15,8 +16,10 @@ const DressCodeScreen: React.FC = () => {
 
   return (
     <>
-      <section className="relative min-h-screen flex flex-col items-center justify-center px-6 py-0 bg-cream z-10">
-        <div className="w-full max-w-md space-y-8">
+      <section className="relative min-h-screen flex flex-col items-center justify-center px-6 py-16 bg-cream">
+        <FloatingEmojis count={7} />
+        
+        <div className="relative z-10 w-full max-w-md space-y-8">
           <h2 className="text-3xl md:text-4xl text-center text-gray-700 font-handwritten">
             Дресс-код
           </h2>

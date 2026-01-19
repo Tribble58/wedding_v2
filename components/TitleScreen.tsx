@@ -4,10 +4,10 @@ import Image from "next/image";
 
 const TitleScreen: React.FC = () => {
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center px-6 py-4 bg-cream">
+    <section className="relative min-h-screen flex flex-col items-center justify-center px-6 py-8 bg-cream">
       <FloatingEmojis count={7} />
       
-      <div className="relative z-10 flex flex-col items-center space-y-4 max-w-md">
+      <div className="relative z-10 flex flex-col items-center space-y-6 max-w-md">
         <h1 className="text-3xl md:text-4xl text-center text-gray-700 font-handwritten">
           Приглашаем вас на нашу свадьбу
         </h1>
@@ -16,7 +16,7 @@ const TitleScreen: React.FC = () => {
           5 апреля 2026 года
         </p>
 
-        <div className="relative w-72 h-72 border-4 border-gray-200 rounded-[40px] overflow-hidden shadow-lg bg-white">
+        <div className="relative w-72 h-80 border-4 border-gray-200 rounded-[40px] overflow-hidden shadow-lg bg-white">
           <Image
             src="/images/bride-and-groom-childhood.jpg"
             alt="Детские фото жениха и невесты"
@@ -24,11 +24,6 @@ const TitleScreen: React.FC = () => {
             className="object-cover"
             priority
           />
-        </div>
-
-        <div className="flex justify-around mb-4 text-sm text-gray-600 font-handwritten">
-          <span>жених</span>
-          <span>невеста</span>
         </div>
 
         <div className="bg-white px-6 py-3 rounded-3xl shadow-md">

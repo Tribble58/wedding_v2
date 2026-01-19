@@ -1,15 +1,11 @@
-Преобразуй предоставленное фото одного ребёнка в детскую свадебную открытку-стикер в стиле скана старого детского фото на винтажной плёнке: мягкий контраст, чёткие лица и контуры, студийное равномерное освещение без теней, лёгкий эффект старой плёнки. 
+Преобразуй это детское фото в милый стикер в детском стиле. Сохрани оригинальное фото точно таким же: реальное лицо, выражение, позу, одежду, аксессуары и детали — не меняй ничего в самом изображении. Полностью удали фон, замени на однотонный светло-бежевый или кремовый, добавь единственный гладкий внешний контур, обводящий всю фигуру по силуэту: толстая линия 4-6 пикселей в стиле детской вырезной наклейки, мягкого розового или белого цвета. Сделай композицию квадратной или близкой к квадрату, фигура занимает середину кадра по высоте. Милый, нежный, ностальгический детский стиль, как винтажная детская фотография.
+​
+​
 
-Сохрани точно лицо ребёнка, позу, одежду и аксессуары из оригинального фото. Размести фигуру по пояс, симметрично спереди на светлом пастельном фоне (#f8f8f8). 
+Английская версия
+Transform this child photo into a cute children's style sticker. Precisely preserve the original photo unchanged: real face, expression, pose, clothing, accessories, and all details — do not alter the image itself. Completely remove the background, replace with a solid light beige or cream color, add a single smooth outer contour outline tracing the entire figure silhouette: thick 4-6 px line in children's die-cut sticker style, soft pink or white. Make composition square or near-square, figure occupies mid-frame height. Cute, tender, nostalgic children's style, like a vintage kid photo.
+​
+​
 
-Добавь вокруг фигуры единую обводку по внешнему контуру — стикерная окантовка белой/розовой линией 3-5px, как наклейка. 
-
-Добавь текст в детском рукописном шрифте (красный/розовый с сердечками, 72pt, читаемо): 
-- Если девочка — над головой "НЕВЕСТА" 
-- Если мальчик — над головой "ЖЕНИХ".
-
-Композиция квадратная или по-близости, рост фигуры по пояс кадра. 
-
-Референс стиля: [generated_image:7]
-
-Negative prompt: искажённые лица, extra limbs, bad hands, blur, artifacts, bad text, watermark, cropped heads, adult features, тени, тёмный фон, несколько детей.
+Negative prompt
+distorted face, extra limbs, deformed hands, blur, digital artifacts, watermark, cropped head or limbs, adult proportions, harsh shadows, cluttered or dark background, multiple figures, any text or writing, labels, signatures.

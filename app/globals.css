@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Comfortaa:wght@300;400;700&display=swap');
+@import url('https://fonts-online.ru/fonts/pink-mouse-script-rus');
 
 @tailwind base;
 @tailwind components;
@@ -15,14 +16,14 @@ html {
 }
 
 body {
-  font-family: 'Comfortaa', cursive;
+  font-family: 'Pink Mouse Script RUS', 'Comfortaa', cursive;
   background-color: #FEFDFB;
   color: #4A4A4A;
   overflow-x: hidden;
 }
 
 h1, h2, h3 {
-  font-family: 'Caveat', cursive;
+  font-family: 'Pink Mouse Script RUS', 'Caveat', cursive;
 }
 
 /* Анимации эмодзи */
