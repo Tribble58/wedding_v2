@@ -20,8 +20,16 @@ const config: Config = {
         orange: "#FF8C42",
       },
       fontFamily: {
-        handwritten: ['Pink Mouse Script RUS', 'Comfortaa', 'cursive'],
+        handwritten: ['Bad Script', 'Pink Mouse Script RUS', 'Comfortaa', 'cursive'],
         rounded: ['Comfortaa', 'cursive'],
+        badscript: ['Bad Script', 'cursive'],
+      },
+      fontSize: {
+        'h1': 'clamp(2.25rem, 6vw, 3.5rem)',
+        'h2': 'clamp(2rem, 5.5vw, 3rem)',
+        'h3': 'clamp(1.5rem, 4vw, 2.25rem)',
+        'title': 'clamp(1.875rem, 5vw, 3rem)',
+        'text-lg': 'clamp(1.125rem, 3.5vw, 1.5rem)',
       },
       animation: {
         float: "float 5s ease-in-out infinite",

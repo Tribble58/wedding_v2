@@ -1,15 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script:wght@400;700&family=Comfortaa:wght@300;400;700&display=swap');
 
-/* Основной шрифт Pink Mouse Script RUS */
+/* Pink Mouse Script RUS */
 @font-face {
   font-family: 'Pink Mouse Script RUS';
   src: url('/fonts/PinkMouseScriptRUS-Regular.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
-  font-feature-settings: 'liga', 'kern';
 }
 
+/* Tailwind */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -25,14 +25,15 @@ html {
 }
 
 body {
-  font-family: 'Pink Mouse Script RUS', 'Comfortaa', cursive;
+  font-family: 'Bad Script', 'Pink Mouse Script RUS', 'Comfortaa', cursive;
   background-color: #FEFDFB;
   color: #4A4A4A;
   overflow-x: hidden;
+  line-height: 1.6;
 }
 
 .font-handwritten {
-  font-family: 'Pink Mouse Script RUS', cursive !important;
+  font-family: 'Bad Script', 'Pink Mouse Script RUS', cursive !important;
 }
 
 /* Анимации эмодзи */

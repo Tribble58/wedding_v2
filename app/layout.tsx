@@ -15,7 +15,10 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <head>
+        {/* Preload шрифтов */}
         <link rel="preload" href="/fonts/PinkMouseScriptRUS-Regular.otf" as="font" type="font/otf" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
       <body className="antialiased font-pms">{children}</body>
     </html>
