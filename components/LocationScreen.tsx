@@ -7,14 +7,12 @@ const locations = [
     title: "Дворец бракосочетания № 2",
     image: "/images/zags.jpg",
     address: "Фурштатская ул., 52",
-    // subtitle: "ЗАГС",
     mapUrl: "https://yandex.ru/maps/org/dvorets_brakosochetaniya_2/1063007010/?ll=30.365425%2C59.945206&z=19"
   },
   {
     title: "Дом Бутик Отель",
     image: "/images/restaurant.jpg",
     address: "Гангутская ул., 4",
-    // subtitle: "Ресторан",
     mapUrl: "https://yandex.ru/maps/org/dom_butik_otel/1705154985/?ll=30.360358%2C59.944803&z=15.94"
   }
 ];
@@ -53,7 +51,6 @@ const LocationScreen: React.FC = () => {
                 <p className="text-base md:text-lg text-graphite font-medium">
                   {location.address}
                 </p>
-                <p className="text-sm text-gray-600">{location.subtitle}</p>
               </div>
               <a
                 href={location.mapUrl}
