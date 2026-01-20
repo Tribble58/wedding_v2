@@ -45,15 +45,7 @@ const GiftsScreen: React.FC = () => {
           >
             Подтвердить участие
           </a>
-
-          {/* Дополнительная ссылка на Google форму */}
-          <a
-            href={GOOGLE_FORM_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block w-full max-w-xs mx-auto text-sm text-gray-600 underline hover:text-gray-800 transition-colors"
-          >
-          </a>
+          
         </div>
       </div>
     </section>
