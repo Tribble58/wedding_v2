@@ -8,8 +8,8 @@ interface FloatingEmojisProps {
 }
 
 const FloatingEmojis: React.FC<FloatingEmojisProps> = ({
-  emojis = ["💕", "❤️", "💍", "🤵", "👰", "🕊️"],
-  count = 7,
+  emojis = ["💕", "❤️", "💍", "👰🏽‍♀️", "🤵🏻", "🕊️"],
+  count = 2,
 }) => {
   const getRandomEmoji = () => emojis[Math.floor(Math.random() * emojis.length)];
   const getRandomAnimation = () => {
