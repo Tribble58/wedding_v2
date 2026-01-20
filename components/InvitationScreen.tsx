@@ -15,8 +15,12 @@ const InvitationScreen: React.FC = () => {
         {/* ✅ Фрейм как в ScheduleScreen */}
       <div className="max-w-3xl mx-auto bg-white/60 backdrop-blur-sm p-8 rounded-xl shadow-xl z-10 relative">
         <p className="text-lg md:text-xl text-graphite text-center leading-relaxed">
-          Совсем скоро мы станем мужем и женой, приглашаем Вас отпраздновать этот незабываемый день вместе с нами! 💍💍💍
+          Совсем скоро мы станем мужем и женой, приглашаем Вас отпраздновать этот незабываемый день вместе с нами! 
         </p>
+        <p className="text-lg md:text-xl text-graphite text-center leading-relaxed">
+          🤵🏻💍👰🏽‍♀️
+        </p>
+        <p></p>
       </div>
 
         <p className="relative w-72 h-80 border-4 border-gray-200 rounded-[35px] overflow-hidden shadow-lg">

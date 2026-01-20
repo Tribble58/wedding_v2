@@ -26,7 +26,7 @@ const TitleScreen: React.FC = () => {
       </div>
 
       <p className="text-3xl md:text-4xl font-wedding text-forest text-center z-10">
-        Владлен + Дана = ❤️
+        Владлен + Дана = 💘
       </p>
     </section>
   );

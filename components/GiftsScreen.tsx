@@ -14,9 +14,9 @@ const GiftsScreen: React.FC = () => {
 
       <div className="max-w-3xl mx-auto space-y-8 z-10 relative">
         <div className="bg-white/70 backdrop-blur-sm p-8 rounded-2xl shadow-xl">
-          <p className="text-4xl text-center mb-4">💝</p>
+          <p className="text-4xl text-center mb-4">☺️</p>
           <h3 className="font-wedding text-2xl md:text-3xl text-forest text-center mb-4">
-            Не беспокойтесь с выбором подарков!
+            Не беспокойтесь о выборе подарка!
           </h3>
           <p className="text-lg md:text-xl text-graphite text-center leading-relaxed">
             Принимаем любые денежные знаки
@@ -38,7 +38,8 @@ const GiftsScreen: React.FC = () => {
         </div>
 
         <div className="text-center mt-10">
-          <p className="text-base md:text-lg text-graphite mb-6">
+          <p className="text-xl md:text-2xl text-graphite mb-6 font-medium leading-relaxed">
+          {/* <p className="text-base md:text-lg text-graphite mb-6"> */}
             Нажмите кнопку внизу для подтверждения участия и заполните небольшую анкету
           </p>
           <a
