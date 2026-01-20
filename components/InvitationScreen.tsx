@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const InvitationScreen: React.FC = () => {
   return (
-    <section className="relative min-h-fit py-10 px-6 flex flex-col items-center justify-center bg-cream overflow-hidden">
+    <section className="relative min-h-fit py-5 px-6 flex flex-col items-center justify-center bg-cream overflow-hidden">
       <FloatingEmojis count={7} />
       
       <div className="relative z-10 flex flex-col items-center space-y-8 max-w-md text-center">
