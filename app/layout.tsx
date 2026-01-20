@@ -1,11 +1,11 @@
 // app/layout.tsx
 import type { Metadata } from "next";
 import "./globals.css";
-import { Lobster, Cormorant_Garamond } from "next/font/google";
+import { Caveat, Cormorant_Garamond } from "next/font/google";
 
-const weddingScript = Lobster({
+const weddingScript = Caveat({
   subsets: ["cyrillic", "latin", "latin-ext"],
-  weight: "400",
+  weight: ["400", "500", "600", "700"],
   variable: "--font-wedding",
   display: "swap",
 });
@@ -13,7 +13,7 @@ const weddingScript = Lobster({
 const weddingBody = Cormorant_Garamond({
   subsets: ["cyrillic", "latin", "latin-ext"],
   weight: ["400", "500", "600", "700"],
-  style: ["italic"],
+  style: ["normal", "italic"],
   variable: "--font-body",
   display: "swap",
 });
@@ -30,13 +30,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html
-      lang="ru"
-      className={`${weddingBody.variable} ${weddingScript.variable}`}
-    >
-      <body className="min-h-screen bg-cream text-graphite antialiased">
-        {children}
-      </body>
+    <html lang="ru" className={`${weddingScript.variable} ${weddingBody.variable}`}>
+      <body>{children}</body>
     </html>
   );
 }

@@ -10,33 +10,27 @@ const scheduleItems = [
 
 const ScheduleScreen: React.FC = () => {
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center px-6 py-8 bg-cream">
-      <FloatingEmojis count={7} />
-      
-      <div className="relative z-10 w-full max-w-md">
-        <h2 className="text-3xl md:text-4xl text-center text-gray-700 font-handwritten mb-10">
-          Расписание
-        </h2>
+    <section className="relative min-h-fit py-10 px-6 bg-creamAlt overflow-hidden">
+      <FloatingEmojis />
 
-        <div className="space-y-4">
-          {scheduleItems.map((item, index) => (
-            <div
-              key={index}
-              className="flex items-center bg-white rounded-2xl shadow-md p-4 border-l-4"
-              style={{
-                borderLeftColor: ["#FFB6C1", "#87CEEB", "#FFB38E", "#90EE90"][index % 4],
-              }}
-            >
-              <span className="text-lg md:text-xl font-bold text-gray-800 mr-3">
-                {item.time}
-              </span>
-              <span className="text-gray-400 text-xl">|</span>
-              <span className="text-sm md:text-base text-gray-600 ml-3">
-                {item.event}
-              </span>
+      <h2 className="font-wedding text-h2 text-forest text-center mb-10 z-10 relative">
+        Расписание
+      </h2>
+
+      <div className="max-w-2xl mx-auto space-y-6 z-10 relative">
+        {scheduleItems.map((item, index) => (
+          <div
+            key={index}
+            className="flex items-start gap-6 bg-white/60 backdrop-blur-sm p-6 rounded-xl shadow-md"
+          >
+            <div className="text-3xl md:text-4xl font-wedding text-pistachio font-bold shrink-0">
+              {item.time}
             </div>
-          ))}
-        </div>
+            <div className="flex-1 pt-1">
+              <p className="text-lg md:text-xl text-graphite leading-snug">{item.event}</p>
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );

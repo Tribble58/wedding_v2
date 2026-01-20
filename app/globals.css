@@ -1,4 +1,5 @@
 /* app/globals.css */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -14,27 +15,27 @@ html {
 }
 
 body {
-  /* Основной текст — читаемый “свадебный” курсив с поддержкой кириллицы */
+  /* Основной текст — элегантный Cormorant Garamond */
   font-family: var(--font-body), ui-serif, Georgia, "Times New Roman", serif;
   background-color: #fefdfb;
   color: #4a4a4a;
   overflow-x: hidden;
-  line-height: 1.7;
-  letter-spacing: 0.02em;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* 🎀 Заголовки/имена — шрифт с завитушками */
+/* 🎀 Заголовки/имена — элегантный скриптовый Great Vibes */
 .font-wedding {
-  font-family: var(--font-wedding), var(--font-body), cursive !important;
-  letter-spacing: 0.03em;
+  font-family: var(--font-wedding), cursive !important;
+  letter-spacing: 0.02em;
 }
 
-/* Резервный “рукописный” стиль (оставил тот же скриптовый, чтобы везде было единообразно) */
+/* Резервный "рукописный" стиль */
 .font-handwritten {
-  font-family: var(--font-wedding), var(--font-body), cursive !important;
+  font-family: var(--font-wedding), cursive !important;
 }
 
 /* Анимации эмодзи */

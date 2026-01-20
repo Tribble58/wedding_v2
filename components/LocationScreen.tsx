@@ -21,17 +21,20 @@ const locations = [
 
 const LocationScreen: React.FC = () => {
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center px-6 py-8 bg-cream">
-      <FloatingEmojis count={7} />
-      
-      <div className="relative z-10 w-full max-w-md space-y-8">
-        <h2 className="text-3xl md:text-4xl text-center text-gray-700 font-handwritten">
-          Места
-        </h2>
+    <section className="relative min-h-fit py-10 px-6 bg-cream overflow-hidden">
+      <FloatingEmojis />
 
+      <h2 className="font-wedding text-h2 text-forest text-center mb-10 z-10 relative">
+        Места
+      </h2>
+
+      <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 z-10 relative">
         {locations.map((location, index) => (
-          <div key={index} className="bg-gradient-to-br from-softPink to-peach rounded-3xl shadow-xl p-6 space-y-6">
-            <div className="relative w-full h-48 rounded-2xl overflow-hidden border-2 border-white">
+          <div
+            key={index}
+            className="bg-white/70 backdrop-blur-sm rounded-2xl shadow-xl overflow-hidden"
+          >
+            <div className="relative w-full h-56">
               <Image
                 src={location.image}
                 alt={location.title}
@@ -39,21 +42,28 @@ const LocationScreen: React.FC = () => {
                 className="object-cover"
               />
             </div>
-
-            <div className="text-white space-y-2">
-              <p className="text-xs uppercase tracking-wider">Адрес:</p>
-              <p className="text-lg font-bold">{location.address}</p>
-              <p className="text-sm">{location.subtitle}</p>
+            <div className="p-6 space-y-3">
+              <h3 className="font-wedding text-2xl md:text-3xl text-forest text-center">
+                {location.title}
+              </h3>
+              <div className="text-center space-y-1">
+                <p className="text-sm text-pistachio font-semibold uppercase tracking-wide">
+                  Адрес:
+                </p>
+                <p className="text-base md:text-lg text-graphite font-medium">
+                  {location.address}
+                </p>
+                <p className="text-sm text-gray-600">{location.subtitle}</p>
+              </div>
+              <a
+                href={location.mapUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full mt-4 py-3 bg-pistachio hover:bg-forest text-white text-center rounded-lg transition-colors duration-300"
+              >
+                Посмотреть на карте 👆
+              </a>
             </div>
-
-            <a
-              href={location.mapUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block w-full bg-white text-peach text-center font-bold py-3 px-6 rounded-2xl shadow-md hover:scale-105 transition-transform"
-            >
-              Посмотреть на карте 👆
-            </a>
           </div>
         ))}
       </div>

@@ -5,7 +5,7 @@ import FloatingEmojis from "./FloatingEmojis";
 import Image from "next/image";
 
 const colors = [
-  { name: "Графит", hex: "#332E2A" },      // Черный
+  { name: "Графит", hex: "#332E2A" }, // Черный
   { name: "Дождливый лес", hex: "#384637" }, // Оливковый
 ];
 
@@ -14,76 +14,65 @@ const DressCodeScreen: React.FC = () => {
 
   return (
     <>
-      <section className="relative min-h-screen flex flex-col items-center justify-center px-6 py-16 bg-cream">
-        <FloatingEmojis count={7} />
-        
-        <div className="relative z-10 w-full max-w-md space-y-8">
-          <h2 className="text-3xl md:text-4xl text-center text-gray-700 font-handwritten">
-            Дресс-код
-          </h2>
+      <section className="relative min-h-fit py-10 px-6 bg-creamAlt overflow-hidden">
+        <FloatingEmojis />
 
-          <p className="text-sm md:text-base text-gray-600 text-center leading-relaxed">
-            Мы бы хотели попросить отдать предпочтение оттенкам с картинок ниже и фасонам, в которых Вы будете чувствовать себя комфортно
-          </p>
+        <h2 className="font-wedding text-h2 text-forest text-center mb-8 z-10 relative">
+          Дресс-код
+        </h2>
 
-          <div>
-            <h3 className="text-xl text-center text-gray-700 font-handwritten mb-4">
-              Оттенки:
-            </h3>
-            <div className="flex justify-between space-x-8">
-              {colors.map((color, index) => (
-                <div key={index} className="flex flex-col items-center space-y-2">
-                  <div
-                    className="w-24 h-24 rounded-full border-2 border-gray-300 shadow-md"
-                    style={{ backgroundColor: color.hex }}
-                  />
-                  <span className="text-xs text-gray-600 text-center">{color.name}</span>
-                </div>
-              ))}
-            </div>
+        <p className="text-lg md:text-xl text-graphite text-center max-w-3xl mx-auto mb-10 leading-relaxed z-10 relative">
+          Мы бы хотели попросить отдать предпочтение оттенкам с картинок ниже и фасонам, в которых Вы будете чувствовать себя комфортно
+        </p>
+
+        <div className="max-w-4xl mx-auto z-10 relative">
+          <h3 className="font-wedding text-3xl md:text-4xl text-forest text-center mb-6">
+            Оттенки:
+          </h3>
+          <div className="flex justify-center gap-6 mb-10 flex-wrap">
+            {colors.map((color, index) => (
+              <div key={index} className="text-center">
+                <div
+                  className="w-24 h-24 md:w-32 md:h-32 rounded-full shadow-lg border-4 border-white"
+                  style={{ backgroundColor: color.hex }}
+                />
+                <p className="mt-3 text-base md:text-lg text-graphite font-medium">{color.name}</p>
+              </div>
+            ))}
           </div>
 
-          <div>
-            <h3 className="text-xl text-center text-gray-700 font-handwritten mb-4">
-              Фасоны:
-            </h3>
+          <h3 className="font-wedding text-3xl md:text-4xl text-forest text-center mb-6">
+            Фасоны:
+          </h3>
+          <div className="relative w-full max-w-xl mx-auto aspect-[960/868] mb-4">
             {/* Соотношение 960:868 ≈ 1.106 */}
-            <div 
-              className="relative w-full rounded-2xl overflow-hidden border-2 border-gray-200 shadow-lg bg-white cursor-pointer hover:scale-[1.02] transition-transform mx-auto"
-              style={{ aspectRatio: '960 / 868' }}
+            <Image
+              src="/images/dress-styles.jpg"
+              alt="Примеры фасонов"
+              fill
+              className="object-contain rounded-xl shadow-xl cursor-pointer hover:scale-105 transition-transform duration-300"
               onClick={() => setIsImageOpen(true)}
-            >
-              <Image
-                src="/images/dress-styles.jpg"
-                alt="Примеры фасонов платьев"
-                fill
-                className="object-contain p-4"
-              />
-            </div>
-            <p className="text-xs text-gray-500 text-center mt-2">Нажмите для увеличения</p>
+            />
           </div>
+          <p className="text-center text-sm text-gray-500 italic">
+            Нажмите для увеличения
+          </p>
         </div>
       </section>
 
       {isImageOpen && (
         <div
-          className="fixed inset-0 z-50 bg-black bg-opacity-95 flex items-center justify-center p-4"
+          className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4"
           onClick={() => setIsImageOpen(false)}
         >
-          <div className="relative w-full h-full max-w-md">
+          <div className="relative w-full max-w-4xl aspect-[960/868]">
             <Image
               src="/images/dress-styles.jpg"
-              alt="Примеры фасонов платьев"
+              alt="Примеры фасонов"
               fill
-              className="object-contain p-4"
+              className="object-contain"
             />
           </div>
-          <button
-            className="absolute top-4 right-4 text-white text-3xl font-bold hover:scale-110 transition-transform"
-            onClick={() => setIsImageOpen(false)}
-          >
-            ✕
-          </button>
         </div>
       )}
     </>

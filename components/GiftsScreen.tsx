@@ -5,47 +5,46 @@ const GOOGLE_FORM_URL = "https://forms.gle/orrxTRJbD8yy6gqs9";
 
 const GiftsScreen: React.FC = () => {
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center px-6 py-8 bg-cream">
-      <FloatingEmojis count={7} />
-      
-      <div className="relative z-10 w-full max-w-md space-y-6">
-        <h2 className="text-3xl md:text-4xl text-center text-softPink font-handwritten">
-          Подарки
-        </h2>
+    <section className="relative min-h-fit py-10 px-6 bg-cream overflow-hidden">
+      <FloatingEmojis />
 
-        <div className="bg-gradient-to-br from-purple-100 to-pink-100 rounded-3xl shadow-lg p-6 space-y-3 border-2 border-purple-200">
-          <h3 className="text-lg md:text-xl font-bold text-purple-800 flex items-center gap-2">
-            <span className="text-2xl">🎁</span>
+      <h2 className="font-wedding text-h2 text-forest text-center mb-8 z-10 relative">
+        Подарки
+      </h2>
+
+      <div className="max-w-3xl mx-auto space-y-8 z-10 relative">
+        <div className="bg-white/70 backdrop-blur-sm p-8 rounded-2xl shadow-xl">
+          <p className="text-4xl text-center mb-4">💝</p>
+          <h3 className="font-wedding text-2xl md:text-3xl text-forest text-center mb-4">
             Не беспокойтесь с выбором подарков!
           </h3>
-          <p className="text-sm md:text-base text-purple-700">
+          <p className="text-lg md:text-xl text-graphite text-center leading-relaxed">
             Принимаем любые денежные знаки
           </p>
         </div>
 
-        <div className="bg-gradient-to-br from-orange to-peach rounded-3xl shadow-lg p-6 space-y-3">
-          <h3 className="text-xl md:text-2xl font-bold text-white flex items-center gap-2">
-            🌸 Цветы
+        <div className="bg-white/70 backdrop-blur-sm p-8 rounded-2xl shadow-xl">
+          <p className="text-4xl text-center mb-4">🌸</p>
+          <h3 className="font-wedding text-2xl md:text-3xl text-forest text-center mb-4">
+            Цветы
           </h3>
-          <p className="text-sm md:text-base text-white leading-relaxed">
+          <p className="text-lg md:text-xl text-graphite text-center leading-relaxed">
             Просим не отягощать себя выбором букетов, декор и украшения уже будут содержать много цветов, которые будут украшать зал и невесту
           </p>
         </div>
 
-        <div className="space-y-4 text-center">
-          <p className="text-sm md:text-base text-gray-600">
+        <div className="text-center mt-10">
+          <p className="text-base md:text-lg text-graphite mb-6">
             Нажмите кнопку внизу для подтверждения участия
           </p>
-          
           <a
             href={GOOGLE_FORM_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="block w-full max-w-xs mx-auto bg-gradient-to-r from-softPink to-peach text-white font-bold text-base md:text-lg py-4 px-8 rounded-3xl shadow-lg hover:scale-105 transition-transform"
+            className="inline-block px-10 py-4 bg-forest hover:bg-pistachio text-white text-lg md:text-xl font-semibold rounded-full shadow-lg transition-all duration-300 hover:scale-105"
           >
             Подтвердить участие
           </a>
-          
         </div>
       </div>
     </section>

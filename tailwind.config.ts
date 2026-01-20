@@ -31,7 +31,7 @@ const config: Config = {
         handwritten: ["var(--font-wedding)", "cursive"],
 
         // Оставил алиас, чтобы не ломать существующие классы в компонентах
-        rounded: ["var(--font-body)", "ui-serif", "Georgia", "serif"],
+        rounded: ["var(--font-body)", "ui-serif", "Georgia", "serif"],       
       },
       fontSize: {
         h1: "clamp(2.75rem, 8vw, 4.5rem)",
