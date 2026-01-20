@@ -26,7 +26,7 @@ const DressCodeScreen: React.FC = () => {
         </p>
 
         <div className="max-w-4xl mx-auto z-10 relative">
-          <h3 className="font-wedding text-3xl md:text-4xl text-forest text-center mb-6">
+          {/* <h3 className="font-wedding text-3xl md:text-4xl text-forest text-center mb-6">
             Оттенки:
           </h3>
           <div className="flex justify-center gap-6 mb-10 flex-wrap">
@@ -39,16 +39,16 @@ const DressCodeScreen: React.FC = () => {
                 <p className="mt-3 text-base md:text-lg text-graphite font-medium">{color.name}</p>
               </div>
             ))}
-          </div>
+          </div> */}
 
-          <h3 className="font-wedding text-3xl md:text-4xl text-forest text-center mb-6">
-            Фасоны:
-          </h3>
+          {/* <h3 className="font-wedding text-2xl md:text-4xl text-forest text-center mb-6">
+            Основные цвета и образы, на которые можно ориентироваться:
+          </h3> */}
           <div className="relative w-full max-w-xl mx-auto aspect-[960/868] mb-4">
             {/* Соотношение 960:868 ≈ 1.106 */}
             <Image
               src="/images/dress-styles.jpg"
-              alt="Примеры фасонов"
+              alt="Основные цвета и образы, на которые можно ориентироваться:"
               fill
               className="object-contain rounded-xl shadow-xl cursor-pointer hover:scale-105 transition-transform duration-300"
               onClick={() => setIsImageOpen(true)}
@@ -68,7 +68,7 @@ const DressCodeScreen: React.FC = () => {
           <div className="relative w-full max-w-4xl aspect-[960/868]">
             <Image
               src="/images/dress-styles.jpg"
-              alt="Примеры фасонов"
+              alt="На что ориентироваться"
               fill
               className="object-contain"
             />
