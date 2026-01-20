@@ -2,10 +2,10 @@ import React from "react";
 import FloatingEmojis from "./FloatingEmojis";
 
 const scheduleItems = [
-  { time: "15:00", event: "Роспись в ЗАГСе" },
-  { time: "16:00", event: "Сбор гостей в ресторане (welcome-зона)" },
-  { time: "16:30", event: "Начало банкета (ресторан)" },
-  { time: "22:30", event: "Окончание банкета" },
+  { time: "15:20", event: "Роспись в ЗАГСе" },
+  { time: "16:30", event: "Сбор гостей в ресторане (welcome-зона)" },
+  { time: "17:00", event: "Начало банкета в ресторане" },
+  { time: "22:00", event: "Окончание банкета" },
 ];
 
 const ScheduleScreen: React.FC = () => {

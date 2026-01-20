@@ -21,29 +21,17 @@ const DressCodeScreen: React.FC = () => {
           Дресс-код
         </h2>
 
-        <p className="text-lg md:text-xl text-graphite text-center max-w-3xl mx-auto mb-10 leading-relaxed z-10 relative">
-          Мы бы хотели попросить отдать предпочтение оттенкам с картинок ниже и фасонам, в которых Вы будете чувствовать себя комфортно
+        <div className="max-w-3xl mx-auto bg-white/60 backdrop-blur-sm p-8 rounded-xl shadow-xl z-10 relative mb-12">
+        <p className="text-lg md:text-xl text-graphite text-center leading-relaxed">
+           Мы бы хотели попросить отдать предпочтение оттенкам с картинок ниже и фасонам, в которых Вы будете чувствовать себя комфортно
         </p>
+      </div>
+
+        {/* <p className="text-lg md:text-xl text-graphite text-center max-w-3xl mx-auto mb-10 leading-relaxed z-10 relative"> */}
+         {/*  */}
+        {/* </p> */}
 
         <div className="max-w-4xl mx-auto z-10 relative">
-          {/* <h3 className="font-wedding text-3xl md:text-4xl text-forest text-center mb-6">
-            Оттенки:
-          </h3>
-          <div className="flex justify-center gap-6 mb-10 flex-wrap">
-            {colors.map((color, index) => (
-              <div key={index} className="text-center">
-                <div
-                  className="w-24 h-24 md:w-32 md:h-32 rounded-full shadow-lg border-4 border-white"
-                  style={{ backgroundColor: color.hex }}
-                />
-                <p className="mt-3 text-base md:text-lg text-graphite font-medium">{color.name}</p>
-              </div>
-            ))}
-          </div> */}
-
-          {/* <h3 className="font-wedding text-2xl md:text-4xl text-forest text-center mb-6">
-            Основные цвета и образы, на которые можно ориентироваться:
-          </h3> */}
           <div className="relative w-full max-w-xl mx-auto aspect-[960/868] mb-4">
             {/* Соотношение 960:868 ≈ 1.106 */}
             <Image

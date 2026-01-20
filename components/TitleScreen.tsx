@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const TitleScreen: React.FC = () => {
   return (
-    <section className="relative min-h-fit py-12 px-6 flex flex-col items-center justify-center bg-gradient-to-b from-cream via-creamAlt to-cream overflow-hidden">
+    <section className="relative min-h-fit pt-12 pb-4 px-6 flex flex-col items-center justify-center bg-gradient-to-b from-cream via-creamAlt to-cream overflow-hidden">
       <FloatingEmojis />
 
       <h1 className="font-wedding text-h1 text-forest text-center mb-6 z-10">

@@ -11,10 +11,13 @@ const InvitationScreen: React.FC = () => {
         {/* <h2 className="font-wedding text-h2 text-forest text-center mb-8 z-10">
           Дорогие друзья!
         </h2> */}
-        
-        <p className="text-lg md:text-xl text-graphite text-center max-w-3xl leading-relaxed z-10">
-          Совсем скоро мы станем мужем и женой, приглашаем Вас отпраздновать этот незабываемый день вместе с нами!
+
+        {/* ✅ Фрейм как в ScheduleScreen */}
+      <div className="max-w-3xl mx-auto bg-white/60 backdrop-blur-sm p-8 rounded-xl shadow-xl z-10 relative">
+        <p className="text-lg md:text-xl text-graphite text-center leading-relaxed">
+          Совсем скоро мы станем мужем и женой, приглашаем Вас отпраздновать этот незабываемый день вместе с нами! 💍💍💍
         </p>
+      </div>
 
         <p className="relative w-72 h-80 border-4 border-gray-200 rounded-[35px] overflow-hidden shadow-lg">
           <Image

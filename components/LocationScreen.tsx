@@ -4,17 +4,17 @@ import Image from "next/image";
 
 const locations = [
   {
-    title: "ЗАГС №2",
+    title: "Дворец бракосочетания № 2",
     image: "/images/zags.jpg",
     address: "Фурштатская ул., 52",
-    subtitle: "Дворец бракосочетания № 2",
-    mapUrl: "https://yandex.ru/maps/?ll=30.366889,59.945278&z=16&text=Фурштатская+ул.,+52"
+    // subtitle: "ЗАГС",
+    mapUrl: "https://yandex.ru/maps/org/dvorets_brakosochetaniya_2/1063007010/?ll=30.365425%2C59.945206&z=19"
   },
   {
     title: "Дом Бутик Отель",
     image: "/images/restaurant.jpg",
     address: "Гангутская ул., 4",
-    subtitle: "Ресторан",
+    // subtitle: "Ресторан",
     mapUrl: "https://yandex.ru/maps/org/dom_butik_otel/1705154985/?ll=30.360358%2C59.944803&z=15.94"
   }
 ];
@@ -25,7 +25,7 @@ const LocationScreen: React.FC = () => {
       <FloatingEmojis />
 
       <h2 className="font-wedding text-h2 text-forest text-center mb-10 z-10 relative">
-        Места
+        Локации дня
       </h2>
 
       <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 z-10 relative">

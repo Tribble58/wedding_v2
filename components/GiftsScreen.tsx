@@ -31,6 +31,7 @@ const GiftsScreen: React.FC = () => {
           <p className="text-lg md:text-xl text-graphite text-center leading-relaxed">
             Декор и украшения уже будут в зале, поэтому приятным комплиментом для нас вместо цветов будет бутылочка игристого вина, которую мы откроем на ближайшем совместном празднике :)
           </p>
+          <br/>
           <p className="text-lg md:text-xl text-graphite text-center leading-relaxed">
             В случае возникновения вопросов обращайтесь к нам❤️
           </p>
@@ -38,7 +39,7 @@ const GiftsScreen: React.FC = () => {
 
         <div className="text-center mt-10">
           <p className="text-base md:text-lg text-graphite mb-6">
-            Нажмите кнопку внизу для подтверждения участия
+            Нажмите кнопку внизу для подтверждения участия и заполните небольшую анкету
           </p>
           <a
             href={GOOGLE_FORM_URL}
@@ -49,6 +50,20 @@ const GiftsScreen: React.FC = () => {
             Подтвердить участие
           </a>
         </div>
+
+
+        <p className="text-lg md:text-xl text-graphite text-center leading-relaxed">
+          До скорой встречи!
+        </p>
+       <div className="mt-6">
+    <p className="text-lg md:text-xl text-center text-graphite italic mb-2">
+      С любовью,
+    </p>
+    <p className="text-lg md:text-xl text-center text-graphite italic mb-2">
+      Владлен и Дана
+    </p>
+  </div>
+
       </div>
     </section>
   );
